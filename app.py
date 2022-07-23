@@ -5,10 +5,11 @@ from security import authenticate, identity
 from resources.user import UserRegister
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
-from db import db
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
-db.init_app(app)
+db = SQLAlchemy(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'Sail'

@@ -16,4 +16,5 @@ SQLAlchemy==1.4.39
 Werkzeug==2.1.2
 wincertstore==0.2
 zipp==3.8.1
-uwsgi   
+uwsgi  
+psycopg2 
